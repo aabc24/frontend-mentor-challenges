@@ -1,0 +1,70 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 100%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  color: var(--dark-gray);
+  background-color: var(--dark-cyan);
+  background-image: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 40vh right 50vw, top 48vh left 48vw;
+}
+
+.profile-container {
+  width: 32.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+  overflow: hidden;
+}
+
+.profile-container b {
+  color: var(--very-dark-desaturated-blue);
+}
+
+.profile-container p:last-of-type {
+  margin: -1rem 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.profile-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-container img:nth-child(2) {
+  margin-top: -5.8rem;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+}
+
+.user-profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  border-top: 1px solid var(--dark-gray);
+}

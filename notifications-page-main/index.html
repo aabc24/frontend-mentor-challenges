@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h3>Notifications <span id="notification-count-display">0</span></h3>
+        <p id="mark-all-read-button">Mark all as read</p>
+      </header>
+
+      <ul class="notifications">
+        <li>
+          <img src="assets/images/avatar-mark-webber.webp" alt="profile pic" />
+          <div class="notification__summary">
+            <p>
+              <b>Mark Webber</b> reacted to your recent post
+              <b>My first tournament today!</b>
+              <span></span>
+            </p>
+            <time>1m ago</time>
+          </div>
+        </li>
+
+        <li>
+          <img src="assets/images/avatar-angela-gray.webp" alt="profile pic" />
+          <div class="notification__summary">
+            <p>
+              <b>Angela Gray</b> followed you
+              <span></span>
+            </p>
+            <time>5m ago</time>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="assets/images/avatar-jacob-thompson.webp"
+            alt="profile pic"
+          />
+          <div class="notification__summary">
+            <p>
+              <b>Jacob Thompson</b> has joined your group
+              <b>Chess Club</b>
+              <span></span>
+            </p>
+            <time>1 day ago</time>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="assets/images/avatar-rizky-hasanuddin.webp"
+            alt="profile pic"
+          />
+          <div class="notification__summary">
+            <p>
+              <b>Rizky Hasanuddin</b> sent you a privated message
+              <span></span>
+            </p>
+            <time>5 days ago</time>
+            <p>
+              Hello, thanks for setting up the Chess Club. I've been a member
+              for a few weeks now and I'm already having lots of fun and
+              improving my game.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="assets/images/avatar-kimberly-smith.webp"
+            alt="profile pic"
+          />
+          <div class="notification__summary">
+            <p>
+              <b>Kimberly Smith</b> commennted on your picture
+              <span></span>
+            </p>
+            <time>1 week ago</time>
+          </div>
+          <img src="assets/images/image-chess.webp" alt="chess image" />
+        </li>
+
+        <li>
+          <img
+            src="assets/images/avatar-nathan-peterson.webp"
+            alt="profile pic"
+          />
+          <div class="notification__summary">
+            <p>
+              <b>Nathan Peterson</b> reacted to your recent post
+              <b>5 end-game strategies to increase your win rate</b>
+              <span></span>
+            </p>
+            <time>2 weeks ago</time>
+          </div>
+        </li>
+
+        <li>
+          <img src="assets/images/avatar-anna-kim.webp" alt="profile pic" />
+          <div class="notification__summary">
+            <p>
+              <b>Anna Kim</b> left the group <b>Chess Club</b>
+              <span></span>
+            </p>
+            <time>2 weeks ago</time>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/aabc24">aabc24</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

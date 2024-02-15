@@ -1,0 +1,117 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 16px;
+  background-color: var(--cream);
+}
+
+.product-card {
+  min-width: 30rem;
+  font-size: 1.4rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  row-gap: 1rem;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-content p {
+  color: var(--dark-grayish-blue);
+}
+
+.product-content p:first-of-type {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.product-content h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  color: var(--very-dark-blue);
+}
+
+.product-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--dark-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.product-content button:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+.product-prices {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.product-prices p {
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  color: var(--dark-cyan);
+}
+
+.product-prices del {
+  color: var(--dark-grayish-blue);
+}
+
+@media screen and (min-width: 480px) {
+  .product-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 55rem;
+  }
+
+  .product-card img {
+    height: 100%;
+  }
+
+  .product-content h2 {
+    font-size: 3.2rem;
+  }
+}

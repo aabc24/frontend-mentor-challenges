@@ -1,0 +1,150 @@
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+
+  --grey: hsl(160, 6%, 91%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  color: var(--Very-dark-blue);
+  background-color: hsl(228, 71%, 99%);
+}
+
+.page {
+  max-width: 58rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page h3 {
+  font-size: 2rem;
+}
+
+.page h3 > span {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.2rem;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+}
+
+.page h3 ~ p {
+  font-size: 1.3rem;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.notifications {
+  padding: 0;
+  list-style: none;
+}
+
+.notifications li {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+}
+
+.notifications li > img {
+  width: 4rem;
+}
+
+.notifications li > img:not(:first-of-type) {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.notifications li > img:not(:first-of-type):hover {
+  outline: 4px solid var(--grey);
+  border-radius: 0.5rem;
+}
+
+.notification__summary p > b {
+  cursor: pointer;
+}
+
+.notification__summary p > b:nth-child(2) {
+  color: var(--dark-grayish-blue);
+}
+
+.notification__summary p > b:hover {
+  color: var(--blue);
+}
+
+.notification__summary p > span {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+}
+
+.notification__summary time {
+  display: block;
+  color: var(--dark-grayish-blue);
+}
+
+.notification__summary p:nth-child(3) {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--grey);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.notification__summary p:nth-child(3):hover {
+  background-color: var(--light-grayish-blue-2);
+}
+
+.notifications li.active {
+  background-color: var(--very-light-grayish-blue);
+}
+
+.notifications li.active .notification__summary p > b:nth-child(2) {
+  color: var(--blue);
+}
+
+.notifications li.active .notification__summary span {
+  background-color: var(--red);
+}
