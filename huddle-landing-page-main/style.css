@@ -1,0 +1,243 @@
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --p-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+  --white: hsl(0, 0%, 100%);
+  --headings-font: "Poppins", sans-serif;
+  --normal-font: "Open Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: var(--normal-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings-font);
+}
+
+h1 {
+  font-size: clamp(1.8663rem, 1.1801rem + 2.9277vw, 3.815rem);
+}
+
+h2 {
+  font-size: clamp(1.2963rem, 0.8931rem + 1.7202vw, 2.4413rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  padding: 1rem 3rem;
+  font-family: var(--headings-font);
+  border: none;
+  border-radius: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 80%;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
+.hero-image {
+  background-image: url("images/bg-hero-mobile.svg");
+  background-color: var(--p-cyan);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-image > .container {
+  padding: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo {
+  width: 13rem;
+  height: auto;
+}
+
+.navbar > .button {
+  background-color: var(--white);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: calc(100vh - 8rem);
+}
+
+.hero-description > .button {
+  color: var(--white);
+  background-color: var(--pink);
+}
+
+.main-content {
+  margin: 10rem auto 5rem auto;
+}
+
+.main-content-section {
+  margin: 2rem;
+  padding: 4rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.community-box > .container {
+  max-width: 90rem;
+}
+
+.community-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20rem;
+  padding: 2rem;
+  margin: 0 4rem -10rem 4rem;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: rgba(14, 11, 11, 0.2) 0px 2px 8px 0px;
+}
+
+.community-content .button {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.footer {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+}
+
+.footer > .container {
+  padding: 15rem 2rem 2rem 2rem;
+}
+
+.footer .logo {
+  filter: brightness(0) invert(1);
+}
+
+.footer-column {
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column > li {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 2rem;
+  margin: 1rem 0;
+}
+
+.footer-column:first-of-type img {
+  margin-top: 0.4rem;
+}
+
+.footer-column:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  column-gap: 2rem;
+}
+
+.footer-column:last-of-type span {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-column:last-of-type span:hover {
+  border: 1px solid var(--pink);
+  color: var(--pink);
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    background-image: url("images/bg-hero-desktop.svg");
+  }
+
+  .hero-content,
+  .main-content-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .main-content-section:nth-child(even) > .section-description {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+  }
+}

@@ -1,0 +1,152 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--Off-white);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.main {
+  width: 35rem;
+  padding: 3rem;
+  background-color: var(--White);
+  border-radius: 1.5rem 1.5rem 10rem 1.5rem;
+}
+
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--Light-grey);
+}
+
+.main__header label {
+  text-transform: uppercase;
+  color: var(--Smokey-grey);
+}
+
+.main__header input {
+  display: block;
+  width: 90px;
+  height: 45px;
+  padding: 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  border: 1px solid var(--Light-grey);
+  border-radius: 0.5rem;
+}
+
+.main__header input::-webkit-outer-spin-button,
+.main__header input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main__header input:focus {
+  outline: 1px solid var(--Purple);
+}
+
+small {
+  display: block;
+  height: 20px;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--Light-red);
+}
+
+.main__footer {
+  padding-top: 3rem;
+  font-size: 4.4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+button {
+  display: block;
+  margin: -3.1rem auto;
+  padding: 1rem;
+  background-color: var(--Purple);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main__footer button:hover {
+  background-color: var(--Off-black);
+}
+
+.main__footer p {
+  margin: 0;
+}
+
+.main__footer span {
+  color: var(--Purple);
+}
+
+.error label {
+  color: var(--Light-red);
+}
+
+.error input,
+.error input:focus {
+  outline: 1px solid var(--Light-red);
+}
+
+.error small {
+  color: var(--Light-red);
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    width: 65rem;
+    border-bottom-right-radius: 25%;
+  }
+
+  .main__header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 4rem;
+  }
+
+  .main__header input {
+    width: 13rem;
+    height: 6.5rem;
+    font-size: 3.2rem;
+  }
+
+  .main__footer {
+    font-size: 6.4rem;
+  }
+
+  button {
+    margin: -4.1rem 0 -4.1rem auto;
+    padding: 2rem;
+  }
+}
