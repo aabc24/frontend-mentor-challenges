@@ -1,0 +1,118 @@
+:root {
+  --very-dark-blue-: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white1: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white2: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 16px;
+  background-color: var(--very-dark-blue-);
+}
+
+.main-container {
+  min-width: 30rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--dark-desaturated-blue);
+  overflow: hidden;
+}
+
+.main-container .image-card {
+  min-height: 20rem;
+  background-image: url("images/image-header-mobile.jpg");
+  background-color: var(--soft-violet);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.summary-card {
+  padding: 2rem 4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+}
+
+.summary-card h2 {
+  color: var(--white);
+}
+
+.summary-card h2 > span {
+  color: var(--soft-violet);
+}
+
+.summary-card p {
+  color: var(--slightly-transparent-white1);
+}
+
+.statistics h3 {
+  margin-bottom: 0;
+  color: var(--white);
+}
+
+.statistics .statistic-item:nth-child(3) > h3 {
+  text-transform: uppercase;
+}
+
+.statistics p {
+  margin-top: 0;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  color: var(--slightly-transparent-white2);
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100rem;
+    text-align: left;
+  }
+
+  .main-container .image-card {
+    background-image: url("images/image-header-desktop.jpg");
+  }
+
+  .summary-card {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+    padding-right: 12rem;
+  }
+
+  .summary-card h2 {
+    font-size: 3rem;
+  }
+
+  .summary-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 8rem;
+  }
+}

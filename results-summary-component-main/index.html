@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="grid place-items-center min-h-screen bg-pale-blue">
+    <main
+      class="min-w-80 max-w-3xl min-h-[510px] bg-white shadow-2xl sm:grid sm:grid-cols-2 sm:rounded-3xl sm:overflow-hidden"
+    >
+      <div
+        class="grid gap-3 p-10 bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-center text-white rounded-b-3xl overflow-hidden"
+      >
+        <p class="font-bold text-lg text-light-lavender">Your Result</p>
+        <div
+          class="grid content-center w-36 mx-auto aspect-square bg-gradient-to-b from-violet-blue to-persian-blue rounded-full sm:w-52"
+        >
+          <p class="text-5xl font-bold">76</p>
+          <small class="text-sm text-light-lavender">of 100</small>
+        </div>
+        <h2 class="text-lg font-bold">Great</h2>
+        <p class="text-sm text-light-lavender">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div
+        class="grid gap-5 p-10 sm:flex sm:flex-col sm:justify-between sm:gap-0"
+      >
+        <h2 class="font-bold text-dark-gray-blue">Summary</h2>
+        <div class="grid gap-3 sm:gap-4">
+          <div
+            class="flex justify-between items-center py-3 px-5 bg-red-50 rounded-xl"
+          >
+            <div class="flex items-center gap-2">
+              <img src="assets/images/icon-reaction.svg" alt="Reaction icon" />
+              <p class="font-bold text-light-red">Reaction</p>
+            </div>
+            <p class="text-dark-gray-blue">
+              <span class="font-bold">80</span> / 100
+            </p>
+          </div>
+          <div
+            class="flex justify-between items-center py-3 px-5 bg-yellow-50 rounded-xl"
+          >
+            <div class="flex items-center gap-2">
+              <img src="assets/images/icon-memory.svg" alt="Memory icon" />
+              <p class="font-bold text-orangey-yellow">Memory</p>
+            </div>
+            <p class="text-dark-gray-blue">
+              <span class="font-bold">92</span> / 100
+            </p>
+          </div>
+          <div
+            class="flex justify-between items-center py-3 px-5 bg-green-50 rounded-xl"
+          >
+            <div class="flex items-center gap-2">
+              <img src="assets/images/icon-verbal.svg" alt="Verbal icon" />
+              <p class="font-bold text-green-teal">Verbal</p>
+            </div>
+            <p class="text-dark-gray-blue">
+              <span class="font-bold">61</span> / 100
+            </p>
+          </div>
+          <div
+            class="flex justify-between items-center py-3 px-5 bg-blue-50 rounded-xl"
+          >
+            <div class="flex items-center gap-2">
+              <img src="assets/images/icon-visual.svg" alt="Visual icon" />
+              <p class="font-bold text-cobalt-blue">Visual</p>
+            </div>
+            <p class="text-dark-gray-blue">
+              <span class="font-bold">72</span> / 100
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="py-3 px-5 bg-dark-gray-blue font-bold text-white rounded-full cursor-pointer transition duration-500 hover:bg-gradient-to-b from-light-slate-blue to-light-royal-blue"
+        >
+          Continue
+        </button>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/aabc24">aabc24</a>.
+    </footer>
+  </body>
+</html>

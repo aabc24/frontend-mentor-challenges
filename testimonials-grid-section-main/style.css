@@ -1,0 +1,119 @@
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 16px;
+  background-color: var(--light-grayish-blue);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-grey {
+  color: var(--very-dark-grayish-blue);
+}
+
+.main-container {
+  max-width: 110rem;
+}
+
+.graduate-testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 3rem;
+  font-size: 1.3rem;
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.graduate-testimonial > p:first-of-type {
+  margin: 1rem auto;
+  font-weight: 600;
+}
+
+.graduate-testimonial > p:last-of-type {
+  opacity: 70%;
+}
+
+.graduate-testimonial:nth-child(1) {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top 1vh right 5vw;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial-header img {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+}
+
+.testimonial-header p {
+  font-weight: 600;
+}
+
+.testimonial-header small {
+  opacity: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .graduate-testimonial {
+    margin: 0;
+  }
+
+  .graduate-testimonial:nth-child(1) {
+    grid-column: 1/3;
+  }
+
+  .graduate-testimonial:nth-child(3) {
+    grid-row: 2;
+  }
+
+  .graduate-testimonial:nth-child(4) {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+
+  .graduate-testimonial:nth-child(5) {
+    grid-row: 1/3;
+  }
+}
